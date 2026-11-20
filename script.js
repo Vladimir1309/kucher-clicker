@@ -70,7 +70,7 @@ function upgradeButtonClick() {
 }
 
 function upgradeButtonAutoClick() {
-    if (score >= currentPriceClick) {
+    if (score >= currentPriceAutoClick) {
         score -= currentPriceClick;
         upgradeAutoClick += 2;
         currentPriceAutoClick *= 2;
