@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ff914775;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+
+    /* Стилизация верхнего блока с заголовком */
+    &>div:first-of-type {
+        max-width: 500px;
+        margin: 20px auto 0;
+        text-align: center;
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: normal;
+            color: #555;
+            line-height: 1.4;
+        }
+    }
+
+    /* Основная карточка кликера */
+    .mainBlock {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 25px;
+        background-color: #fff;
+        padding: 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+
+        margin: 20px auto;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+        /* Текстовые показатели */
+        p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+
+        .scoreAmount {
+            font-size: 22px;
+            color: rgba(255, 75, 135, 0.9);
+            margin-top: 5px;
+        }
+
+        /* Базовые стили для всех кнопок (как в примере) */
+        button {
+            min-height: 45px;
+            padding: 10px 20px;
+            box-shadow: 0px 8px 0px rgba(255, 75, 135, 0.315);
+            border-radius: 25px;
+            border: none;
+            color: white;
+            background-color: rgba(255, 75, 135, 0.678);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            line-height: 1.3;
+
+            &:hover:not(:disabled) {
+                background-color: rgba(255, 75, 135, 0.87);
+            }
+
+            &:active:not(:disabled) {
+                box-shadow: 0px 0px 0px rgba(255, 75, 135, 0.315);
+                transform: translateY(6px);
+            }
+
+            /* Состояние, когда на улучшение не хватает очков */
+            &:disabled {
+                background-color: #d3d3d3;
+                box-shadow: 0px 8px 0px #b0b0b0;
+                cursor: not-allowed;
+                opacity: 0.8;
+            }
+        }
+
+        /* Акцент на главную кнопку клика */
+        .mainClick {
+            height: 65px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Кнопка сброса (чуть спокойнее, чтобы не нажать случайно) */
+        .resetClick {
+            margin-top: 10px;
+            background-color: rgba(120, 120, 120, 0.6);
+            box-shadow: 0px 6px 0px rgba(120, 120, 120, 0.3);
+            font-size: 13px;
+            min-height: 38px;
+
+            &:hover {
+                background-color: rgba(120, 120, 120, 0.85);
+            }
+
+            &:active {
+                box-shadow: 0px 0px 0px rgba(120, 120, 120, 0.3);
+                transform: translateY(5px);
+            }
+        }
+    }
+}
